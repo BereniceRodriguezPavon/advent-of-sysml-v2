@@ -8,7 +8,16 @@ package L02_SantaSleigh {
             ref item driver = santa;
         }
         part cargoBay  { doc /* Place for the GiftBag. */  }
-        part dashboard { doc /* Naughty-Nice dashboard. */ }
+        part dashboard {
+             doc 
+             /* Naughty-Nice dashboard. */ 
+             part togle1;
+             part display{
+                part buttonA;
+                part buttonB;
+             }
+             }
+        
 
         // Entities related to the sleigh
         ref item santa;
