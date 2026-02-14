@@ -7,12 +7,17 @@ package L04_SantaCargoBay_Challenge {
     part def TeddyBear specializes Item;
     part def CandyCane specializes Item;
 
+enum def Color {
+      red;
+   }
+
     // Base definitions for containers
     part def Bag;
 
     // Base sleigh definition
     part def Sleigh {
         part cargoBay : Bag;
+        attribute Bagcolor : Color = Color::red;
     }
 
     // Bottomless gift bag definition
