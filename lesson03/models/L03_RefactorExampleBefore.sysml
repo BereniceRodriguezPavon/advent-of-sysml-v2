@@ -1,18 +1,23 @@
 package L03_RefactorExampleBefore {
-private import ScalarValues::*;
+  private import ScalarValues::*;
 
-                      part def SantaSleigh {
-        ref part dasher { attribute energyLevel : Real := 100.0; }
-ref part dancer { attribute energyLevel : Real := 100.0; }
-          ref part prancer { attribute energyLevel : Real := 100.0; 
-          
-          }
-        ref part vixen { attribute energyLevel : Real := 100.0; }
-        ref part comet { attribute energyLevel : Real := 100.0; }
-          ref part cupid { attribute energyLevel : Real := 100.0; }
-          ref part donner { attribute energyLevel : Real := 100.0; }
-            ref part blitzen { attribute energyLevel : Real := 100.0; }
-        ref part rudolph { attribute energyLevel : Real := 200.0; 
-}
-                      }
+  // Define a reusable Reindeer part definition with default energy level
+  part def Reindeer {
+    attribute energyLevel : Real default 100.0;
+  }
+
+  part def SantaSleigh {
+    // Standard reindeer use default energy level (100.0)
+    ref part dasher : Reindeer;
+    ref part dancer : Reindeer;
+    ref part prancer : Reindeer;
+    ref part vixen : Reindeer;
+    ref part comet : Reindeer;
+    ref part cupid : Reindeer;
+    ref part donner : Reindeer;
+    ref part blitzen : Reindeer;
+
+    // Rudolph has special energy level
+    ref part rudolph : Reindeer { attribute :>> energyLevel := 200.0; }
+  }
 }
