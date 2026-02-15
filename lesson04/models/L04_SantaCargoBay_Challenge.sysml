@@ -45,7 +45,8 @@ enum def Color {
 
     // Santa's special sleigh
     part def SantaSleigh specializes Sleigh {
-        doc /* Santa's special sleigh with a bottomless gift bag */
+        doc /* It is the magical vehicle,pulled by flying reindeer, used to spread joy and illusions to children around the world on Christmas Eve */
+        doc /* Santa's special sleigh has a bottomless gift bag */
 
         // The cargo bay payload is called giftBag and is always a BottomlessGiftBag
         part giftBag : BottomlessGiftBag [1] redefines cargoBay;
