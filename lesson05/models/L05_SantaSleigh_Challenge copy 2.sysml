@@ -92,6 +92,7 @@ package L05_SantaSleigh_Challenge {
             :>> weight = 35.0[kg];
             :>> skillType = SkillType::assembly;
             :>> skillLevel = 150.0;
+            
         }
 
         ref part dancer : Reindeer subsets reindeer {
@@ -148,6 +149,7 @@ package L05_SantaSleigh_Challenge {
             :>> weight = 38.0[kg];
             :>> skillType = SkillType::magic;
             :>> skillLevel = 200.0;
+            constant :>> noseColor = "red";
         }
     }
 
