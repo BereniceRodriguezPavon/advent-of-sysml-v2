@@ -35,7 +35,7 @@ package Challenge1_SantaSleigh {
         part reindeerteamPropulsion [9] {
             attribute color : Color = Color::brown;  
             }
-        part harnessesandreinsPropulsion [11] {
+        part harnessesandreinsPropulsion [1] {
             attribute color : Color = Color::gold;
         }
     }
