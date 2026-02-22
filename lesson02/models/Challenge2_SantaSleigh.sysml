@@ -1,5 +1,12 @@
-package L02_SantaSleigh {
+package Challenge2_SantaSleigh {
+    
     private import ScalarValues::*;
+    
+    enum def ColorPalette {
+        enum orange; enum yellow; enum green;
+        enum blue;   enum indigo; enum violet;
+        enum silver; enum gold;   enum red;
+    }
 
     part def SantaSleigh {
         // Components of the sleigh
@@ -9,8 +16,7 @@ package L02_SantaSleigh {
         }
         part cargoBay  { doc /* Place for the GiftBag. */  }
         part dashboard {
-             doc
-             /* Naughty-Nice dashboard. */
+             doc /* Naughty-Nice dashboard. */
              part toggle1;
              part display{
                 part buttonA;
@@ -18,7 +24,6 @@ package L02_SantaSleigh {
              }
              }
         
-
         // Entities related to the sleigh
         ref item santa;
         abstract ref part reindeer : Reindeer [9];
@@ -31,18 +36,16 @@ package L02_SantaSleigh {
         ref part cupid   subsets reindeer { constant attribute redefines noseColor = ColorPalette::violet; }
         ref part donner  subsets reindeer { constant attribute redefines noseColor = ColorPalette::silver; }
         ref part blitzen subsets reindeer { constant attribute redefines noseColor = ColorPalette::gold;   }
-        ref part rudolph subsets reindeer { constant attribute redefines noseColor = ColorPalette::red;    
-                                                     attribute redefines energyLevel := 200.0;      }
+        ref part rudolph subsets reindeer { constant attribute redefines noseColor = ColorPalette::red;
+                                            attribute redefines energyLevel := 200.0;
+                                            attribute redefines isLeader := true;      }
     }
 
     part def Reindeer {
         constant attribute noseColor : ColorPalette;
         attribute energyLevel : Real default := 100.0;
+        attribute isLeader : Boolean default := false;
     }
 
-    enum def ColorPalette {
-        enum orange; enum yellow; enum green;
-        enum blue;   enum indigo; enum violet;
-        enum silver; enum gold;   enum red;
-    }
+    
 }

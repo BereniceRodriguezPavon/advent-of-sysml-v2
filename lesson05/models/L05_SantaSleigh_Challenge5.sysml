@@ -1,4 +1,4 @@
-package L05_SantaSleigh_Challenge {
+package L05_SantaSleigh_Challenge5 {
     private import ScalarValues::*;
     private import SI::*;
     private import ISQ::*;
